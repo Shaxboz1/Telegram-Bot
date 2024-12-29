@@ -122,11 +122,9 @@ public class Main extends TelegramLongPollingBot {
                     for (Currents current : currents) {
                         if (current.getCcy().equals("USD")) {
                             rate = Double.parseDouble(current.getRate());
-                            break;
                         }
                     }
-                    double uzbekSom = dollars * rate;
-                    sendMessage.setText("\uD83C\uDDFA\uD83C\uDDF8 " + dollars + " USD = \uD83D\uDCB5 " + uzbekSom + " UZS");
+                    sendMessage.setText("\uD83C\uDDFA\uD83C\uDDF8 " + dollars + " USD = \uD83D\uDCB5 " + (dollars*rate) + " UZS");
                 } catch (NumberFormatException e) {
                     sendMessage.setText("⚠️ Iltimos, raqam kiriting!");
                 }

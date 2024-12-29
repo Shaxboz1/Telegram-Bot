@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Jar faylni konteynerga nusxalash
-COPY target/your-bot.jar /app/bot.jar
+COPY target/TelegramBot-1.0-SNAPSHOT.jar.jar /app/bot.jar
 
 # Java botni ishga tushirish
 ENTRYPOINT ["java", "-jar", "bot.jar"]

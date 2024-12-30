@@ -25,6 +25,10 @@ public class Main extends TelegramLongPollingBot {
         } catch (TelegramApiException e) {
             throw new RuntimeException(e);
         }
+        String port = System.getenv("PORT");
+        if (port == null) {
+            port = "8080";  // Agar PORT o'zgaruvchisi mavjud bo'lmasa, 8080 portni ishlatish
+        }
     }
     private final Map<Long, String> userStates = new HashMap<>();
     @Override

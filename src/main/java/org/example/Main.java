@@ -59,7 +59,7 @@ public class Main extends TelegramLongPollingBot {
                         "Qo'shimcha yordam kerak bo'lsa, bizga murojaat qiling: @SHaXa_Jony");
             } else if (text.equals("/valyuta")) {
                 sendMessage.setText("•Valyutani Nomini Kiriting!");
-            }else if (text.length() == 3) {
+            }else if (text.matches("[A-Z]{3}")) {
                 StringBuilder Rates = new StringBuilder();
                 for (Currents current : currents) {
                     if (current.getCcy().equals(text)) {
